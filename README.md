@@ -19,7 +19,7 @@
 
 ## Introduction
 
-**Zen Guard** is a comprehensive safety moderation solution for AI systems, offering multilingual content filtering and classification. Built upon the Qwen3Guard architecture with Zen identity fine-tuning, it provides:
+**Zen Guard** is a comprehensive safety moderation solution for AI systems, offering multilingual content filtering and classification. Built upon the ZenGuard architecture with Zen identity fine-tuning, it provides:
 
 🛡️ **Comprehensive Protection**: Robust safety assessment for prompts and responses with real-time detection optimized for streaming scenarios.
 
@@ -149,11 +149,11 @@ Apache 2.0
 
 ## Based On
 
-Zen Guard is built upon [Qwen3Guard](https://github.com/QwenLM/Qwen3Guard) with Zen identity fine-tuning.
+Zen Guard is built upon [ZenGuard](https://github.com/zenlm/ZenGuard) with Zen identity fine-tuning.
 
 ### Upstream Source
-- **Repository**: https://github.com/QwenLM/Qwen3Guard
-- **Base Model**: Qwen3-4B
+- **Repository**: https://github.com/zenlm/ZenGuard
+- **Base Model**: Zen 4B
 - **License**: Apache 2.0
 
 ### Zen LM Enhancements
@@ -162,7 +162,7 @@ Zen Guard is built upon [Qwen3Guard](https://github.com/QwenLM/Qwen3Guard) with 
 - Enhanced documentation and examples
 - Additional deployment configurations
 
-Please cite both the original Qwen3Guard work and Zen Guard in publications.
+Please cite both the original ZenGuard work and Zen Guard in publications.
 
 ---
 
