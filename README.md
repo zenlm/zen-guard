@@ -21,6 +21,7 @@
 
 **Zen Guard** is a comprehensive safety moderation solution for AI systems, offering multilingual content filtering and classification. Built upon the ZenGuard architecture with Zen identity fine-tuning, it provides:
 
+
 🛡️ **Comprehensive Protection**: Robust safety assessment for prompts and responses with real-time detection optimized for streaming scenarios.
 
 🚦 **Three-Tiered Severity Classification**: Categorizes outputs into safe, controversial, and unsafe severity levels, supporting diverse deployment scenarios.
@@ -131,6 +132,49 @@ vllm serve zenlm/zen-guard --port 8000 --max-model-len 32768
 | zen-guard-gen | 16GB | 8GB | 500+ req/s |
 | zen-guard-stream | 8GB | 4GB | Real-time |
 
+## Integration with Hanzo Guard
+
+For production deployments, combine Zen Guard (ML classification) with [Hanzo Guard](https://github.com/hanzoai/guard) (Rust runtime sanitization) for comprehensive protection:
+
+```
+┌─────────────┐     ┌──────────────┐     ┌────────────┐     ┌─────────────┐
+│ Application │ ──► │ Hanzo Guard  │ ──► │ Zen Guard  │ ──► │ LLM Provider│
+└─────────────┘     │ (Rust)       │     │ (ML Model) │     └─────────────┘
+                    │              │     │            │
+                    │ • PII Redact │     │ • Content  │
+                    │ • Rate Limit │     │   Classify │
+                    │ • Injection  │     │ • Severity │
+                    │   Detect     │     │   Levels   │
+                    │ • Audit Log  │     │ • Category │
+                    └──────────────┘     └────────────┘
+```
+
+**Hanzo Guard** (Rust, <1ms):
+- PII detection and redaction (SSN, credit cards, emails, phones, API keys)
+- Prompt injection detection (jailbreak patterns)
+- Rate limiting per user
+- Audit logging for compliance
+
+**Zen Guard** (ML, ~120ms):
+- Deep content classification via neural network
+- Three-tier severity (safe/controversial/unsafe)
+- 9 safety categories
+- 119 language support
+
+```rust
+// Example: Stacking both guards
+use hanzo_guard::{Guard, GuardConfig};
+
+let hanzo = Guard::builder()
+    .with_zen_guard_api_key("your-api-key")  // Enables Zen Guard API calls
+    .build();
+
+// Single call sanitizes through both layers
+let result = hanzo.sanitize_input("User message here").await?;
+```
+
+Install Hanzo Guard: `cargo add hanzo-guard` ([crates.io](https://crates.io/crates/hanzo-guard))
+
 ## License
 
 Apache 2.0
@@ -146,6 +190,7 @@ Apache 2.0
     howpublished={\url{https://huggingface.co/zenlm/zen-guard}}
 }
 ```
+
 
 ---
 
