@@ -147,23 +147,6 @@ Apache 2.0
 }
 ```
 
-## Based On
-
-Zen Guard is built upon [ZenGuard](https://github.com/zenlm/ZenGuard) with Zen identity fine-tuning.
-
-### Upstream Source
-- **Repository**: https://github.com/zenlm/ZenGuard
-- **Base Model**: Zen 4B
-- **License**: Apache 2.0
-
-### Zen LM Enhancements
-- Zen AI identity and branding
-- Integration with Zen Gym training framework
-- Enhanced documentation and examples
-- Additional deployment configurations
-
-Please cite both the original ZenGuard work and Zen Guard in publications.
-
 ---
 
 <p align="center">
