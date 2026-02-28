@@ -1,42 +1,27 @@
-# AI Assistant Knowledge Base
+# zen-guard — AI Knowledge Base
 
-**Last Updated**: $(date +%Y-%m-%d)
-**Project**: $(basename "$REPO_PATH")
-**Organization**: $(basename "$(dirname "$REPO_PATH")")
+**Project**: zen-guard
+**Organization**: zenlm
+**Repository**: https://github.com/zenlm/zen-guard
+**HuggingFace**: https://huggingface.co/zenlm/zen-guard
+**Last Updated**: 2026-02-27
 
-## Project Overview
+## Overview
 
-This repository is part of the $(basename "$(dirname "$REPO_PATH")") organization.
-
-## Essential Commands
-
-### Development
-```bash
-# Add common commands here
-```
-
-## Architecture
-
-## Key Technologies
-
-## Development Workflow
-
-## Context for All AI Assistants
-
-This file (`LLM.md`) is symlinked as:
-- `.AGENTS.md`
-- `CLAUDE.md`
-- `QWEN.md`
-- `GEMINI.md`
-
-All files reference the same knowledge base. Updates here propagate to all AI systems.
+zen-guard is part of the Zen AI model family by Hanzo AI / Zen LM.
 
 ## Rules for AI Assistants
 
 1. **ALWAYS** update LLM.md with significant discoveries
-2. **NEVER** commit symlinked files (.AGENTS.md, CLAUDE.md, etc.) - they're in .gitignore
-3. **NEVER** create random summary files - update THIS file
+2. **NEVER** commit model weights (*.safetensors, *.bin, *.gguf, *.pt)
+3. **NEVER** commit symlinked files (CLAUDE.md, AGENTS.md, GEMINI.md, QWEN.md)
+4. **NEVER** create random summary files — update THIS file only
+5. Zen models are based on **Qwen3** architecture
+
+## Context
+
+This file (`LLM.md`) is symlinked as CLAUDE.md, AGENTS.md, GEMINI.md, QWEN.md.
 
 ---
 
-**Note**: This file serves as the single source of truth for all AI assistants working on this project.
+*Part of the Zen AI family — Clarity Through Intelligence*
