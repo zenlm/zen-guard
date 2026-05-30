@@ -5,9 +5,9 @@
 <p>
 
 <p align="center">
-        💜 <a href="https://chat.qwenlm.ai/"><b>Qwen Chat</b></a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href="https://huggingface.co/collections/Qwen/qwen3guard-68d2729abbfae4716f3343a1">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/collections/Qwen3Guard-308c39ef5ffb4b">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://qwen.ai/blog?id=f0bbad0677edf58ba93d80a1e12ce458f7a80548&from=research.research-list">Blog</a> &nbsp&nbsp ｜ &nbsp&nbsp📖 <a href="https://qwen.readthedocs.io/">Documentation</a>
+ 💜 <a href="https://chat.qwenlm.ai/"><b> Chat</b></a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href="https://huggingface.co/collections//qwen3guard-68d2729abbfae4716f3343a1">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/collections/Qwen3Guard-308c39ef5ffb4b">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://qwen.ai/blog?id=f0bbad0677edf58ba93d80a1e12ce458f7a80548&from=research.research-list">Blog</a> &nbsp&nbsp ｜ &nbsp&nbsp📖 <a href="https://qwen.readthedocs.io/">Documentation</a>
 <br> 
-</a>&nbsp&nbsp 📄 <a href="https://github.com/QwenLM/Qwen3Guard/blob/main/Qwen3Guard_Technical_Report.pdf">Tech Report</a> &nbsp&nbsp | &nbsp&nbsp💬 <a href="https://github.com/QwenLM/Qwen/blob/main/assets/wechat.png">WeChat (微信)</a>&nbsp&nbsp | &nbsp&nbsp🫨 <a href="https://discord.gg/CV4E9rpNSD"> Discord</a>
+</a>&nbsp&nbsp 📄 <a href="https://github.com/QwenLM/Qwen3Guard/blob/main/Qwen3Guard_Technical_Report.pdf">Tech Report</a> &nbsp&nbsp | &nbsp&nbsp💬 <a href="https://github.com/QwenLM//blob/main/assets/wechat.png">WeChat (微信)</a>&nbsp&nbsp | &nbsp&nbsp🫨 <a href="https://discord.gg/CV4E9rpNSD"> Discord</a>
 </p>
 
 Visit our Hugging Face or ModelScope organization (click links above), search checkpoints with names starting with `Qwen3Guard-`, and you will find all you need! Enjoy!
@@ -16,7 +16,7 @@ Visit our Hugging Face or ModelScope organization (click links above), search ch
 
 ## Introduction
 
-**Qwen3Guard** is a series of safety moderation models built upon Qwen3 and trained on a dataset of 1.19 million prompts and responses labeled for safety. The series includes models of three sizes (0.6B, 4B, and 8B) and features two specialized variants: **Qwen3Guard-Gen**, a generative model that accepts full user prompts and model responses to perform safety classification, and **Qwen3Guard-Stream**, which incorporates a token-level classification head for real-time safety monitoring during incremental text generation.
+**Qwen3Guard** is a series of safety moderation models built upon and trained on a dataset of 1.19 million prompts and responses labeled for safety. The series includes models of three sizes (0.6B, 4B, and 8B) and features two specialized variants: **Qwen3Guard-Gen**, a generative model that accepts full user prompts and model responses to perform safety classification, and **Qwen3Guard-Stream**, which incorporates a token-level classification head for real-time safety monitoring during incremental text generation.
 
 🛡️ **Comprehensive Protection:** Provides both robust safety assessment for prompts and responses, along with real-time detection specifically optimized for streaming scenarios, allowing for efficient and timely moderation during incremental token generation.
 
@@ -30,8 +30,8 @@ Visit our Hugging Face or ModelScope organization (click links above), search ch
 
 ## News
 
-* **2025/09/30**: We released [**Qwen3-4B-SafeRL**](https://huggingface.co/Qwen/Qwen3-4B-SafeRL), a safety-aligned model fine-tuned via reinforcement learning using feedback from **Qwen3Guard-Gen-4B**, following the hybrid reward framework described in the technical report.
-* **2025/10/16**: We released a [**benchmark**](https://huggingface.co/datasets/Qwen/Qwen3GuardTest) for evaluating the performance of moderation in streaming responses and reasoning models. The evaluation code is available [here](./eval).
+* **2025/09/30**: We released [**-4B-SafeRL**](https://huggingface.co//-4B-SafeRL), a safety-aligned model fine-tuned via reinforcement learning using feedback from **Qwen3Guard-Gen-4B**, following the hybrid reward framework described in the technical report.
+* **2025/10/16**: We released a [**benchmark**](https://huggingface.co/datasets//Qwen3GuardTest) for evaluating the performance of moderation in streaming responses and reasoning models. The evaluation code is available [here](./eval).
 
 
 ## Basic information
@@ -39,14 +39,14 @@ Visit our Hugging Face or ModelScope organization (click links above), search ch
 
 | Name                  | Type     |Download                                                                                                                                                                        |
 |-----------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Qwen3Guard-Gen-0.6B         | Generative Guard    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3Guard-Gen-0.6B  ) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3Guard-Gen-0.6B)                                       |
-| Qwen3Guard-Gen-4B         | Generative Guard     | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3Guard-Gen-4B) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3Guard-Gen-4B)                                       |
-| Qwen3Guard-Gen-8B         | Generative Guard     | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3Guard-Gen-8B) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3Guard-Gen-8B)                                       |
-| Qwen3Guard-Stream-0.6B         | Stream Guard     | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3Guard-Stream-0.6B) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3Guard-Stream-0.6B)                                       |
-| Qwen3Guard-Stream-4B         | Stream Guard     | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3Guard-Stream-4B) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3Guard-Stream-4B)                                       |
-| Qwen3Guard-Stream-8B         | Stream Guard     | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3Guard-Stream-8B) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3Guard-Stream-8B)                                       |
-| Qwen3-4B-SafeRL         | Safety-aligned LLM    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-4B-SafeRL) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-4B-SafeRL)                                       |
-| Qwen3GuardTest         | Guard Benchmark    | 🤗 [Hugging Face](https://huggingface.co/datasets/Qwen/Qwen3GuardTest) • 🤖 [ModelScope](https://modelscope.cn/datasets/Qwen/Qwen3GuardTest)                                       |
+| Qwen3Guard-Gen-0.6B | Generative Guard | 🤗 [Hugging Face](https://huggingface.co//Qwen3Guard-Gen-0.6B ) • 🤖 [ModelScope](https://modelscope.cn/models//Qwen3Guard-Gen-0.6B) |
+| Qwen3Guard-Gen-4B | Generative Guard | 🤗 [Hugging Face](https://huggingface.co//Qwen3Guard-Gen-4B) • 🤖 [ModelScope](https://modelscope.cn/models//Qwen3Guard-Gen-4B) |
+| Qwen3Guard-Gen-8B | Generative Guard | 🤗 [Hugging Face](https://huggingface.co//Qwen3Guard-Gen-8B) • 🤖 [ModelScope](https://modelscope.cn/models//Qwen3Guard-Gen-8B) |
+| Qwen3Guard-Stream-0.6B | Stream Guard | 🤗 [Hugging Face](https://huggingface.co//Qwen3Guard-Stream-0.6B) • 🤖 [ModelScope](https://modelscope.cn/models//Qwen3Guard-Stream-0.6B) |
+| Qwen3Guard-Stream-4B | Stream Guard | 🤗 [Hugging Face](https://huggingface.co//Qwen3Guard-Stream-4B) • 🤖 [ModelScope](https://modelscope.cn/models//Qwen3Guard-Stream-4B) |
+| Qwen3Guard-Stream-8B | Stream Guard | 🤗 [Hugging Face](https://huggingface.co//Qwen3Guard-Stream-8B) • 🤖 [ModelScope](https://modelscope.cn/models//Qwen3Guard-Stream-8B) |
+| -4B-SafeRL | Safety-aligned LLM | 🤗 [Hugging Face](https://huggingface.co//-4B-SafeRL) • 🤖 [ModelScope](https://modelscope.cn/models//-4B-SafeRL) |
+| Qwen3GuardTest | Guard Benchmark | 🤗 [Hugging Face](https://huggingface.co/datasets//Qwen3GuardTest) • 🤖 [ModelScope](https://modelscope.cn/datasets//Qwen3GuardTest) |
 
 For more details, please refer to our [blog](https://qwenlm.github.io/blog/qwen3guard/) and [Technical Report](https://github.com/QwenLM/Qwen3Guard/blob/main/Qwen3Guard_Technical_Report.pdf).
 
@@ -355,7 +355,7 @@ If you find our work helpful, feel free to give us a cite.
 ```
 
 ## Contact Us
-If you are interested to leave a message to either our research team or product team, join our [Discord](https://discord.gg/z3GAxXZ9Ce) or [WeChat groups](https://github.com/QwenLM/Qwen/blob/main/assets/wechat.png)!
+If you are interested to leave a message to either our research team or product team, join our [Discord](https://discord.gg/z3GAxXZ9Ce) or [WeChat groups](https://github.com/QwenLM//blob/main/assets/wechat.png)!
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
     <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
