@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="zen-guard" width="880"></p>
+
 <p align="center">
   <img src="https://zenlm.org/logo.png" width="200"/>
 </p>
