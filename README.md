@@ -21,7 +21,7 @@
 
 ## Introduction
 
-**Zen Guard** is a comprehensive safety moderation solution for AI systems, offering multilingual content filtering and classification. Built upon the ZenGuard architecture with Zen identity fine-tuning, it provides:
+**Zen Guard** is a comprehensive safety moderation solution for AI systems, offering multilingual content filtering and classification. Fine-tuned from [Qwen/Qwen3Guard-Gen-4B](https://huggingface.co/Qwen/Qwen3Guard-Gen-4B) (Apache-2.0, Alibaba Qwen) with Zen identity + agentic-data training + abliteration, it provides:
 
 
 🛡️ **Comprehensive Protection**: Robust safety assessment for prompts and responses with real-time detection optimized for streaming scenarios.
@@ -179,7 +179,7 @@ Install Hanzo Guard: `cargo add hanzo-guard` ([crates.io](https://crates.io/crat
 
 ## License
 
-Apache 2.0
+`Apache-2.0`. Upstream: **[Qwen/Qwen3Guard-Gen-4B](https://huggingface.co/Qwen/Qwen3Guard-Gen-4B)** by Alibaba Qwen (Apache-2.0). See the [NOTICE](NOTICE) file for full attribution.
 
 ## Citation
 
